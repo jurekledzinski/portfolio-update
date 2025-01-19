@@ -1,0 +1,62 @@
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 2px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.button:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.buttonConfirm {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.buttonConfirm:hover {
+  background-color: var(--color-primary-hover);
+}
+
+button.buttonCancel {
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-text-primary);
+}
+
+.buttonCancel:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+button.buttonModalClose {
+  padding: 1px 6px;
+  margin: 0;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.buttonModalClose:hover {
+  background-color: var(--color-secondary-hover);
+  color: var(--color-text-primary);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+  width: inherit;
+}
+
+@media (min-width: 35.938rem) {
+  .button {
+    padding: 0.5rem 1rem;
+  }
+}
