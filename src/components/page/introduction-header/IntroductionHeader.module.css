@@ -1,0 +1,16 @@
+.containerText {
+  width: 100%;
+}
+
+.title {
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+.colored {
+  color: #ff851b;
+}
+
+.text {
+  color: var(--color-text-secondary);
+}
