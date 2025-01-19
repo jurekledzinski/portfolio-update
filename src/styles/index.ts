@@ -1,5 +1,5 @@
-import stylesGlobal from './Global.module.css';
+import stylesApp from './App.module.css';
 
 export const styles = {
-  ...stylesGlobal,
+  ...stylesApp,
 };
