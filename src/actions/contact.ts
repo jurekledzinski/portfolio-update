@@ -9,9 +9,7 @@ export const sendContactMessage = async (body: ContactFormInputs) => {
     body: JSON.stringify(body),
   });
 
-  if (!response.ok) {
-    throw new Error('Failed to send message');
-  }
+  if (!response.ok) throw new Error('Failed to send message');
 
   return response.json();
 };
