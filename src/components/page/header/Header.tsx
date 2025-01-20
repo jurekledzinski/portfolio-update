@@ -13,7 +13,7 @@ export const Header = () => {
   const mutation = useMutation<ResponseSuccess, Error, ContactFormInputs>({
     mutationFn: async (body) => await sendContactMessage(body),
     onSuccess: () => showSuccessToast('Message sent successfully'),
-    onError: () => showErrorToast('Message sent successfully'),
+    onError: () => showErrorToast('Message failed to send. Please try later'),
   });
 
   const { methodsContact, onSubmitContact } = useContactForm({
@@ -29,18 +29,6 @@ export const Header = () => {
           <span>Port</span>
           <span>folio</span>
         </h3>
-        <button
-          onClick={() => {
-            const userData = {
-              name: 'John Doe',
-              email: 'john@example.com',
-              message: 'ggg',
-            };
-            mutation.mutate(userData);
-          }}
-        >
-          Click
-        </button>
         <ModalContact
           form="contact"
           triggerButton="Contact"
