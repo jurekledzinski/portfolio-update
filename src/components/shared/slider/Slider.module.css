@@ -4,19 +4,22 @@
   max-width: 48rem;
   margin: auto;
   --slide-height: 19rem;
-  --slide-spacing: 1rem;
+  --slide-spacing: 7rem;
   --slide-size: 100%;
   overflow: hidden;
 }
 
 .emblaContainer {
   display: flex;
-  height: calc(100% - 20px);
+  width: 100%;
+  /* height: calc(100% - 20px); */
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
 }
+
 .emblaSlide {
   color: white;
+  width: 100%;
   transform: translate3d(0, 0, 0);
   flex: 0 0 var(--slide-size);
   min-width: 0;

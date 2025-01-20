@@ -4,6 +4,18 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { SliderProps } from './types';
 import { useControlSlider } from '@/hooks';
 
+const slides = [
+  {
+    id: 1,
+    src: 'images/shoppy-600.png',
+  },
+  {
+    id: 2,
+    src: 'images/news-600.png',
+  },
+];
+
+// <img src="/images/example.jpg" alt="Example" />
 export const Slider = ({ options }: SliderProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
@@ -13,9 +25,9 @@ export const Slider = ({ options }: SliderProps) => {
   return (
     <div className={styles.embla} ref={emblaRef}>
       <div className={styles.emblaContainer}>
-        {[1, 2].map((slide) => (
-          <div className={styles.emblaSlide} key={slide}>
-            Slide {slide}
+        {slides.map((slide) => (
+          <div className={styles.emblaSlide} key={slide.id}>
+            <img src={slide.src} alt="Project" />
           </div>
         ))}
       </div>
