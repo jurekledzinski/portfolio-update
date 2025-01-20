@@ -23,5 +23,5 @@
 
 .warning {
   margin-top: 0.25rem;
-  background-color: #ff851b;
+  background-color: var(--color-warning);
 }
