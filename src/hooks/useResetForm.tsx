@@ -13,7 +13,7 @@ export const useResetForm = ({
   isSuccess,
   isSubmitSuccess,
   onSuccess,
-  isReset,
+  isReset = true,
 }: UseResetFormProps) => {
   useEffect(() => {
     if (isSubmitSuccess && !isPending && isSuccess) {
