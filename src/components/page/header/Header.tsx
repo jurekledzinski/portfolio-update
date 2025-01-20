@@ -38,6 +38,10 @@ export const Header = () => {
           isPending={mutation.isPending}
           isSuccess={mutation.isSuccess}
           onCancel={() => methodsContact.reset()}
+          onSuccess={() => {
+            console.log('RESET MUTATION');
+            mutation.reset();
+          }}
         >
           <ContactForm
             isError={false}
