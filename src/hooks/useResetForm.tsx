@@ -17,9 +17,7 @@ export const useResetForm = ({
 }: UseResetFormProps) => {
   useEffect(() => {
     if (isSubmitSuccess && !isPending && isSuccess) {
-      if (isReset) {
-        onSuccess();
-      }
+      if (isReset) onSuccess();
     }
   }, [isPending, isReset, isSubmitSuccess, isSuccess, onSuccess]);
 };
