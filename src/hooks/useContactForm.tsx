@@ -25,10 +25,7 @@ export const useContactForm = ({
     isPending,
     isSuccess,
     isSubmitSuccess: methods.formState.isSubmitSuccessful,
-    onSuccess: () => {
-      console.log('RESET SUKCES');
-      methods.reset({ email: '', message: '', name: '' });
-    },
+    onSuccess: () => methods.reset({ email: '', message: '', name: '' }),
   });
 
   return {
