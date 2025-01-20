@@ -16,3 +16,7 @@
   color: var(--color-text-white);
   text-transform: uppercase;
 }
+
+.logo > span:first-child {
+  color: var(--color-text-orange);
+}

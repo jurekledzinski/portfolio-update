@@ -10,7 +10,10 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <h3 className={styles.logo}>Portfolio</h3>
+        <h3 className={styles.logo}>
+          <span>Port</span>
+          <span>folio</span>
+        </h3>
         <ModalContact
           form="contact"
           triggerButton="Contact"
