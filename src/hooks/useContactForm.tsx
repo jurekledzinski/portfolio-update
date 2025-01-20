@@ -3,10 +3,16 @@ import { useForm } from 'react-hook-form';
 import { useResetForm } from './useResetForm';
 
 type UseContactFormProps = {
-  onSuccess: () => void;
+  isPending: boolean;
+  isSuccess: boolean;
+  onSubmit: (body: ContactFormInputs) => void;
 };
 
-export const useContactForm = ({ onSuccess }: UseContactFormProps) => {
+export const useContactForm = ({
+  isPending,
+  isSuccess,
+  onSubmit,
+}: UseContactFormProps) => {
   const methods = useForm<ContactFormInputs>({
     defaultValues: {
       email: '',
@@ -15,16 +21,15 @@ export const useContactForm = ({ onSuccess }: UseContactFormProps) => {
     },
   });
 
-  const onSubmit = (data: ContactFormInputs) => {
-    console.log('Submit data', data);
-  };
-
   useResetForm({
-    isPending: false,
-    isSuccess: false,
+    isPending,
+    isSuccess,
     methods,
     defaultValues: { email: '', message: '', name: '' },
-    onSuccess,
+    onSuccess: () => {
+      console.log('RESET SUKCES');
+      methods.reset({});
+    },
   });
 
   return {

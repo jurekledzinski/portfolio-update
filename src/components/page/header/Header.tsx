@@ -1,33 +1,25 @@
 import styles from './Header.module.css';
-import { ContactForm, ModalContact } from '@/components/shared';
+import { ResponseSuccess, sendContactMessage } from '@/actions';
+import { showErrorToast, showSuccessToast } from '@/helpers';
 import { useContactForm } from '@/hooks';
 import { useMutation } from '@tanstack/react-query';
+import {
+  ContactForm,
+  ContactFormInputs,
+  ModalContact,
+} from '@/components/shared';
 
 export const Header = () => {
-  const mutation = useMutation({
-    mutationFn: async () => {
-      const response = await fetch('/.netlify/functions/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name: 'Hello' }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to send message');
-      }
-
-      const data = response.json();
-      return data;
-    },
-    onSuccess: () => {},
+  const mutation = useMutation<ResponseSuccess, Error, ContactFormInputs>({
+    mutationFn: async (body) => await sendContactMessage(body),
+    onSuccess: () => showSuccessToast('Message sent successfully'),
+    onError: () => showErrorToast('Message sent successfully'),
   });
 
   const { methodsContact, onSubmitContact } = useContactForm({
-    onSuccess: () => {
-      // invoke toast
-    },
+    isPending: mutation.isPending,
+    isSuccess: mutation.isSuccess,
+    onSubmit: (body) => mutation.mutate(body),
   });
 
   return (
@@ -39,7 +31,12 @@ export const Header = () => {
         </h3>
         <button
           onClick={() => {
-            mutation.mutate();
+            const userData = {
+              name: 'John Doe',
+              email: 'john@example.com',
+              message: 'ggg',
+            };
+            mutation.mutate(userData);
           }}
         >
           Click
