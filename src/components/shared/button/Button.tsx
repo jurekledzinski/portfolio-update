@@ -6,15 +6,17 @@ export const Button = ({
   children,
   className,
   disabled,
+  form,
   onClick,
   ...props
 }: ButtonProps) => {
   return (
     <button
+      {...props}
       className={classNames(styles.button, className!)}
       disabled={disabled}
+      {...(form && { form })}
       onClick={onClick}
-      {...props}
     >
       {children}
     </button>

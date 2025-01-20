@@ -16,14 +16,14 @@
 
 .buttonConfirm {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-text-white);
 }
 
 .buttonConfirm:hover {
   background-color: var(--color-primary-hover);
 }
 
-button.buttonCancel {
+.buttonCancel {
   background-color: transparent;
   border: 1px solid var(--color-secondary);
   color: var(--color-text-primary);
@@ -33,10 +33,10 @@ button.buttonCancel {
   background-color: var(--color-secondary-hover);
 }
 
-button.buttonModalClose {
-  padding: 1px 6px;
+.buttonModalClose {
+  padding: 3px 6px 1px;
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   background-color: transparent;
   border: 1px solid white;
   color: white;
@@ -44,7 +44,7 @@ button.buttonModalClose {
   transition: 0.3s linear;
 }
 
-button.buttonModalClose:hover {
+.buttonModalClose:hover {
   background-color: var(--color-secondary-hover);
   color: var(--color-text-primary);
 }
