@@ -33,3 +33,5 @@ build-ssr
 # Compiled JavaScript files
 *.js
 *.jsx
+# Local Netlify folder
+.netlify
