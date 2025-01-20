@@ -22,8 +22,6 @@ export const Header = () => {
     onSubmit: (body) => mutation.mutate(body),
   });
 
-  console.log('mutation', mutation);
-
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -38,10 +36,7 @@ export const Header = () => {
           isPending={mutation.isPending}
           isSuccess={mutation.isSuccess}
           onCancel={() => methodsContact.reset()}
-          onSuccess={() => {
-            console.log('RESET MUTATION');
-            mutation.reset();
-          }}
+          onSuccess={() => mutation.reset()}
         >
           <ContactForm
             isError={false}
