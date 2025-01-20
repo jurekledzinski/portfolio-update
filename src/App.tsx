@@ -1,5 +1,6 @@
 import { styles } from '@/styles';
 import {
+  Footer,
   Header,
   IntroductionButtonGroup,
   IntroductionHeader,
@@ -16,9 +17,13 @@ const App = () => {
           <IntroductionButtonGroup />
         </div>
         <div className={styles.box}>
+          <header className={styles.header}>
+            <h3 className={styles.subTitle}>Projects</h3>
+          </header>
           <Slider />
         </div>
       </main>
+      <Footer />
     </>
   );
 };
