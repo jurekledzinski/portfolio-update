@@ -1,3 +1,10 @@
 .buttonGroup {
   margin: 1rem 0 0;
 }
+
+@media (max-width: 35.938rem) {
+  .buttonIntroduction {
+    min-width: initial;
+    width: 100%;
+  }
+}

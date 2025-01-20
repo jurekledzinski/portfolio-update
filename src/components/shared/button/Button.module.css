@@ -10,7 +10,7 @@
   transition: 0.3s linear;
 }
 
-.button:disabled {
+button.button:disabled {
   background-color: var(--color-disabled);
 }
 

@@ -10,7 +10,8 @@ export const IntroductionButtonGroup = () => {
       <Button
         className={classNames(
           stylesButton.buttonConfirm,
-          stylesButton.buttonMinWidth
+          stylesButton.buttonMinWidth,
+          styles.buttonIntroduction
         )}
       >
         <Icon icon={faFile} />
@@ -18,7 +19,8 @@ export const IntroductionButtonGroup = () => {
       <Button
         className={classNames(
           stylesButton.buttonConfirm,
-          stylesButton.buttonMinWidth
+          stylesButton.buttonMinWidth,
+          styles.buttonIntroduction
         )}
       >
         <Icon icon={faSquareGithub} />
@@ -26,7 +28,8 @@ export const IntroductionButtonGroup = () => {
       <Button
         className={classNames(
           stylesButton.buttonConfirm,
-          stylesButton.buttonMinWidth
+          stylesButton.buttonMinWidth,
+          styles.buttonIntroduction
         )}
       >
         <Icon icon={faLinkedin} />
