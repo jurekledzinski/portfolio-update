@@ -33,8 +33,8 @@ export const Header = () => {
           form="contact"
           triggerButton="Contact"
           title="Contact"
-          isPending={false}
-          isSuccess={false}
+          isPending={mutation.isPending}
+          isSuccess={mutation.isSuccess}
           onCancel={() => methodsContact.reset()}
         >
           <ContactForm
