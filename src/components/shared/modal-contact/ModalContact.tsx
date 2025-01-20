@@ -1,6 +1,5 @@
 'use client';
 import { Button } from '../button';
-
 import { Modal } from '@/components/shared';
 import { ModalContent } from '@/components/shared';
 import { ModalDeleteProps } from './types';
@@ -35,6 +34,7 @@ export const ModalContact = ({
       <Button className={classButton} onClick={() => setModal(true)}>
         {triggerButton}
       </Button>
+
       <Modal
         showBackdrop={showBackdrop}
         ref={nodeRef}

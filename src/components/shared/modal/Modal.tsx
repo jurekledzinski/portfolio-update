@@ -13,6 +13,8 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(
 
     useImperativeHandle(ref, () => localRef.current!);
 
+    console.log('showModal modal', showModal);
+
     return (
       <>
         <Backdrop show={showBackdrop} />
@@ -30,7 +32,7 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(
           onEnter={onEnter}
           onExited={onExit}
         >
-          <div className={styles.modalElement} ref={ref}>
+          <div className={styles.modalElement} ref={localRef}>
             {children}
           </div>
         </CSSTransition>
