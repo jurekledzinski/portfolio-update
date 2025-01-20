@@ -10,6 +10,10 @@
   transition: 0.3s linear;
 }
 
+.button:disabled {
+  background-color: var(--color-disabled);
+}
+
 .button:hover {
   background-color: var(--color-secondary-hover);
 }
@@ -39,7 +43,7 @@
   font-size: 14px;
   background-color: transparent;
   border: 1px solid white;
-  color: white;
+  color: var(--color-text-white);
   cursor: pointer;
   transition: 0.3s linear;
 }
