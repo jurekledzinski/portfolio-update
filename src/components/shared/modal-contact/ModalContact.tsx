@@ -57,9 +57,6 @@ export const ModalContact = ({
             if (onCancel) onCancel();
             setModal(false);
           }}
-          onConfirm={() => {
-            // setModal(false)
-          }}
         />
       </Modal>
     </>
