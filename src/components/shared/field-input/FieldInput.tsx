@@ -24,10 +24,7 @@ export const FieldInput = forwardRef<HTMLInputElement, FieldInputProps>(
     return (
       <Fieldset className={classNames(styles.fieldset, classNameField!)}>
         {label && (
-          <Label
-            className={classNames(styles.label, classNameLabel!)}
-            htmlFor={name}
-          >
+          <Label className={classNames(classNameLabel!)} htmlFor={name}>
             {label}
           </Label>
         )}
