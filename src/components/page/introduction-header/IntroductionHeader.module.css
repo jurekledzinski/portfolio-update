@@ -5,12 +5,28 @@
 .title {
   color: var(--color-text-primary);
   text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 .colored {
-  color: #ff851b;
+  color: var(--color-text-orange);
 }
 
 .text {
   color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 35.938rem) {
+  .button {
+    padding: 0.5rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
 }
