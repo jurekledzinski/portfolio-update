@@ -1,3 +1,13 @@
+import { UseFormReturn } from 'react-hook-form';
+
+export type ContactFormInputs = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 export type ContactFormProps = {
-  methods: unknown;
+  methods: UseFormReturn<ContactFormInputs, unknown, undefined>;
+  onSubmit: (e?: React.BaseSyntheticEvent) => Promise<void>;
+  isError: boolean;
 };
