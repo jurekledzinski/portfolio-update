@@ -1,27 +1,25 @@
-import { FieldValues, UseFormReturn } from 'react-hook-form';
 import { useEffect } from 'react';
 
-type UseResetFormProps<T extends FieldValues> = {
+type UseResetFormProps = {
   isPending: boolean;
   isSuccess: boolean;
-  methods: UseFormReturn<T, unknown, undefined>;
+  isSubmitSuccess: boolean;
   onSuccess: () => void;
-  defaultValues?: T;
+  isReset?: boolean;
 };
 
-export const useResetForm = <T extends FieldValues>({
+export const useResetForm = ({
   isPending,
   isSuccess,
-  methods,
+  isSubmitSuccess,
   onSuccess,
-  defaultValues = {} as T,
-}: UseResetFormProps<T>) => {
+  isReset,
+}: UseResetFormProps) => {
   useEffect(() => {
-    if (methods.formState.isSubmitSuccessful && !isPending && isSuccess) {
-      if (Object.keys(defaultValues).length) {
-        methods.reset(defaultValues);
+    if (isSubmitSuccess && !isPending && isSuccess) {
+      if (isReset) {
+        onSuccess();
       }
-      onSuccess();
     }
-  }, [defaultValues, isPending, methods, isSuccess, onSuccess]);
+  }, [isPending, isReset, isSubmitSuccess, isSuccess, onSuccess]);
 };
