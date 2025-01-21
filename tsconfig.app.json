@@ -21,13 +21,18 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"]
     }
   },
-  "include": ["src/**/*", "vite-env.d.ts"],
+  "include": [
+    "src/**/*",
+    "vite-env.d.ts",
+    "dts/**/*.d.ts",
+    "netlify/functions/**/*"
+  ],
   "exclude": ["node_modules"]
 }
