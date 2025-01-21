@@ -1,5 +1,5 @@
 import { Button, Icon, stylesButton } from '@/components/shared';
-import { classNames } from '@/helpers';
+import { classNames, showSuccessToast } from '@/helpers';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import styles from './IntroductionButtonGroup.module.css';
@@ -10,29 +10,37 @@ export const IntroductionButtonGroup = () => {
       <Button
         className={classNames(
           stylesButton.buttonConfirm,
-          stylesButton.buttonMinWidth,
           styles.buttonIntroduction
         )}
+        onClick={() => showSuccessToast('Cv downloaded successfully')}
       >
-        <Icon icon={faFile} />
+        <a
+          className={styles.link}
+          href="/files/cv.pdf"
+          download="cv_jurekledzinski.pdf"
+        >
+          <Icon icon={faFile} />
+        </a>
       </Button>
       <Button
         className={classNames(
           stylesButton.buttonConfirm,
-          stylesButton.buttonMinWidth,
           styles.buttonIntroduction
         )}
       >
-        <Icon icon={faSquareGithub} />
+        <a className={styles.link} href="https://github.com/jurekledzinski">
+          <Icon icon={faSquareGithub} />
+        </a>
       </Button>
       <Button
         className={classNames(
           stylesButton.buttonConfirm,
-          stylesButton.buttonMinWidth,
           styles.buttonIntroduction
         )}
       >
-        <Icon icon={faLinkedin} />
+        <a className={styles.link} href="#">
+          <Icon icon={faLinkedin} />
+        </a>
       </Button>
     </div>
   );

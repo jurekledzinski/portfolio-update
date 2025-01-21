@@ -2,9 +2,26 @@
   margin: 1rem 0 0;
 }
 
+a.link:link,
+a.link:visited,
+a.link:link:active,
+a.link:visited:active {
+  width: 100%;
+  padding: 0.5rem;
+  color: var(--color-text-white);
+}
+
+.buttonIntroduction {
+  min-width: initial;
+  width: 100%;
+  padding: initial;
+}
+
 @media (max-width: 35.938rem) {
-  .buttonIntroduction {
-    min-width: initial;
-    width: 100%;
+  a.link:link,
+  a.link:visited,
+  a.link:link:active,
+  a.link:visited:active {
+    padding: 0.5rem 1rem;
   }
 }
