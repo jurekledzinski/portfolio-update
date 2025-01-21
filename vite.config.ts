@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-// @ts-expect-error no types for vite-plugin-handlebars';
-import handlebars from 'vite-plugin-handlebars';
+import { handlebarsPlugin } from './plugins/vite-plugin-handlebars';
 
 export default defineConfig({
-  plugins: [react(), handlebars()],
+  plugins: [react(), handlebarsPlugin()],
   server: {
     open: true,
     port: 3000,
