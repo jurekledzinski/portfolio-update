@@ -151,12 +151,9 @@ p {
 }
 
 a:link,
-a:visited {
-  cursor: pointer;
-  color: var(--color-text-primary);
-}
-
+a:visited,
 a:link:active,
 a:visited:active {
+  cursor: pointer;
   color: var(--color-text-primary);
 }
