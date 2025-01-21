@@ -22,6 +22,9 @@ export const Header = () => {
     onSubmit: (body) => mutation.mutate(body),
   });
 
+  const idDirtyForm = methodsContact.formState.isDirty;
+  console.log('idDirtyForm', idDirtyForm);
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
