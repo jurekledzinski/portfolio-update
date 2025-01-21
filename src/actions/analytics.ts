@@ -1,4 +1,4 @@
-export const sendContactMessage = async (body: { createdAt: string }) => {
+export const sendData = async (body: { eventType: string }) => {
   const response = await fetch('/.netlify/functions/analytics', {
     method: 'POST',
     headers: {
