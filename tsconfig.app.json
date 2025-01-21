@@ -31,7 +31,7 @@
   "include": [
     "src/**/*",
     "vite-env.d.ts",
-    "dts/**/*.d.ts",
+    "src/types/**/*",
     "netlify/functions/**/*"
   ],
   "exclude": ["node_modules"]
