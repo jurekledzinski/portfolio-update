@@ -1,10 +1,15 @@
+import styles from './IntroductionButtonGroup.module.css';
 import { Button, Icon, stylesButton } from '@/components/shared';
 import { classNames, showSuccessToast } from '@/helpers';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
-import styles from './IntroductionButtonGroup.module.css';
+import { IntroductionButtonGroupProps } from './types';
 
-export const IntroductionButtonGroup = () => {
+export const IntroductionButtonGroup = ({
+  onDownload,
+  onRedirectGithub,
+  onRedirectLinkedin,
+}: IntroductionButtonGroupProps) => {
   return (
     <div className={classNames(stylesButton.buttonGroup, styles.buttonGroup)}>
       <Button
@@ -12,7 +17,10 @@ export const IntroductionButtonGroup = () => {
           stylesButton.buttonConfirm,
           styles.buttonIntroduction
         )}
-        onClick={() => showSuccessToast('Cv downloaded successfully')}
+        onClick={() => {
+          onDownload();
+          showSuccessToast('Cv downloaded successfully');
+        }}
       >
         <a
           className={styles.link}
@@ -27,6 +35,7 @@ export const IntroductionButtonGroup = () => {
           stylesButton.buttonConfirm,
           styles.buttonIntroduction
         )}
+        onClick={() => onRedirectGithub()}
       >
         <a className={styles.link} href="https://github.com/jurekledzinski">
           <Icon icon={faSquareGithub} />
@@ -37,6 +46,7 @@ export const IntroductionButtonGroup = () => {
           stylesButton.buttonConfirm,
           styles.buttonIntroduction
         )}
+        onClick={() => onRedirectLinkedin()}
       >
         <a className={styles.link} href="#">
           <Icon icon={faLinkedin} />
