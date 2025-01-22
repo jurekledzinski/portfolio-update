@@ -17,7 +17,7 @@ export const Slider = ({ options }: SliderProps) => {
   const { disabledNext, disabledPrev, onNextButtonClick, onPrevButtonClick } =
     useControlSlider({ emblaApi });
 
-  console.log('emblaApi', emblaApi.selectedScrollSnap());
+  console.log('emblaApi', emblaApi?.selectedScrollSnap());
 
   return (
     <div className={styles.embla}>
