@@ -1,7 +1,7 @@
 [build]
 	functions = "netlify/functions"
 	publish = "build" 
-    command = "npm run build && cp -r src/templates build/templates"
+     command = "npm run build && mkdir -p netlify/functions/src/templates && cp src/templates/contactEmail.hbs netlify/functions/src/templates/contactEmail.hbs"
 
 [functions]
     node_bundler = "esbuild"
