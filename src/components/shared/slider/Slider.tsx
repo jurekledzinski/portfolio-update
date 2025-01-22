@@ -11,6 +11,7 @@ import { useControlSlider } from '@/hooks';
 import {
   faChevronLeft,
   faChevronRight,
+  faGlobe,
 } from '@fortawesome/free-solid-svg-icons';
 
 export const Slider = ({ options }: SliderProps) => {
@@ -41,10 +42,10 @@ export const Slider = ({ options }: SliderProps) => {
           >
             <a
               className={stylesLink.link}
-              href={sliderData[currentIndex].repository}
+              href={sliderData[currentIndex].live}
               target="_blank"
             >
-              Live
+              Live <Icon icon={faGlobe} />
             </a>
           </Button>
           <Button
