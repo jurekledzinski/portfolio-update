@@ -39,10 +39,16 @@ img {
   padding: 0.5rem 1rem;
 }
 
-.buttonGroup {
+.buttonGroups {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   margin-top: 0.5rem;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }

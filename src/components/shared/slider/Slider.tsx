@@ -31,8 +31,8 @@ export const Slider = ({ options }: SliderProps) => {
           ))}
         </div>
       </div>
-      <div className={styles.buttonGroup}>
-        <div>
+      <div className={styles.buttonGroups}>
+        <div className={styles.buttonGroup}>
           <Button
             className={classNames(
               stylesButton.buttonConfirm,
@@ -60,7 +60,7 @@ export const Slider = ({ options }: SliderProps) => {
             </a>
           </Button>
         </div>
-        <div>
+        <div className={styles.buttonGroup}>
           <Button
             className={classNames(
               stylesButton.buttonConfirm,
