@@ -1,7 +1,8 @@
 [build]
 	command = "npm run build"
 	functions = "netlify/functions"
-	publish = "build"
+	publish = "build" 
+    command = "npm run build && cp -r src/templates build/templates"
 
 [functions]
     node_bundler = "esbuild"
