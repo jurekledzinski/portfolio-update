@@ -32,13 +32,8 @@ export const Slider = ({ options }: SliderProps) => {
         </div>
       </div>
       <div className={styles.buttonGroup}>
-        <>
-          <Button
-            className={classNames(
-              stylesButton.buttonConfirm,
-              styles.sliderButton
-            )}
-          >
+        <div>
+          <Button className={stylesButton.buttonConfirm}>
             <a
               className={stylesLink.link}
               href={sliderData[currentIndex].repository}
@@ -46,12 +41,7 @@ export const Slider = ({ options }: SliderProps) => {
               Live
             </a>
           </Button>
-          <Button
-            className={classNames(
-              stylesButton.buttonConfirm,
-              styles.sliderButton
-            )}
-          >
+          <Button className={stylesButton.buttonConfirm}>
             <a
               className={stylesLink.link}
               href={sliderData[currentIndex].repository}
@@ -59,8 +49,8 @@ export const Slider = ({ options }: SliderProps) => {
               <Icon icon={faSquareGithub} />
             </a>
           </Button>
-        </>
-        <>
+        </div>
+        <div>
           <Button
             className={classNames(
               stylesButton.buttonConfirm,
@@ -81,7 +71,7 @@ export const Slider = ({ options }: SliderProps) => {
           >
             <Icon icon={faChevronRight} />
           </Button>
-        </>
+        </div>
       </div>
     </div>
   );
