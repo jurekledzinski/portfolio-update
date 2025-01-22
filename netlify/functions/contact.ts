@@ -6,12 +6,12 @@ import path from 'path';
 import { ContactEmailSchema } from '../../src/actions';
 import { tryCatch } from '../../netlify-helpers/tryCatch';
 import type { Handler, HandlerEvent } from '@netlify/functions';
-import contactEmailTemplate from '../../src/templates/contactEmail.hbs';
+// import contactEmailTemplate from '../../src/templates/contactEmail.hbs';
 
-// const contactEmailTemplate = fs.readFileSync(
-//   path.join(__dirname, '../../src/templates/contactEmail.hbs'),
-//   'utf-8'
-// );
+const contactEmailTemplate = fs.readFileSync(
+  path.join(__dirname, '../../src/templates/contactEmail.hbs'),
+  'utf-8'
+);
 const compiledTemplate = handlebars.compile(contactEmailTemplate);
 
 export const handler: Handler = tryCatch(async (event: HandlerEvent) => {
