@@ -45,7 +45,7 @@ export const Slider = ({ options }: SliderProps) => {
               href={sliderData[currentIndex].live}
               target="_blank"
             >
-              Live <Icon icon={faGlobe} />
+              <Icon icon={faGlobe} />
             </a>
           </Button>
           <Button
