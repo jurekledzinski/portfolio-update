@@ -3,6 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { Button, stylesButton } from '@/components/shared';
 import { classNames } from '@/helpers';
 import { Icon } from '../icon';
+import { sliderData } from '@/data';
 import { SliderProps } from './types';
 import { useControlSlider } from '@/hooks';
 import {
@@ -10,28 +11,19 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-const slides = [
-  {
-    id: 1,
-    src: 'images/shoppy-600.png',
-  },
-  {
-    id: 2,
-    src: 'images/news-600.png',
-  },
-];
-
 export const Slider = ({ options }: SliderProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
   const { disabledNext, disabledPrev, onNextButtonClick, onPrevButtonClick } =
     useControlSlider({ emblaApi });
 
+  console.log('emblaApi', emblaApi);
+
   return (
     <div className={styles.embla}>
       <div className={styles.emblaViewport} ref={emblaRef}>
         <div className={styles.emblaContainer}>
-          {slides.map((slide) => (
+          {sliderData.map((slide) => (
             <div className={styles.emblaSlide} key={slide.id}>
               <img src={slide.src} alt="Project image" />
             </div>
