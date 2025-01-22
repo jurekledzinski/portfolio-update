@@ -1,12 +1,12 @@
 import styles from './Slider.module.css';
 import useEmblaCarousel from 'embla-carousel-react';
 import { Button, stylesButton } from '@/components/shared';
-import { stylesLink } from '@/components/page';
 import { classNames } from '@/helpers';
 import { faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { Icon } from '../icon';
 import { sliderData } from '@/data';
 import { SliderProps } from './types';
+import { stylesLink } from '@/components/page';
 import { useControlSlider } from '@/hooks';
 import {
   faChevronLeft,
@@ -42,6 +42,7 @@ export const Slider = ({ options }: SliderProps) => {
             <a
               className={stylesLink.link}
               href={sliderData[currentIndex].repository}
+              target="_blank"
             >
               Live
             </a>
@@ -55,6 +56,7 @@ export const Slider = ({ options }: SliderProps) => {
             <a
               className={stylesLink.link}
               href={sliderData[currentIndex].repository}
+              target="_blank"
             >
               <Icon icon={faSquareGithub} />
             </a>

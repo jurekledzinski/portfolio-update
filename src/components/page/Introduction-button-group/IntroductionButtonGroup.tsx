@@ -37,7 +37,11 @@ export const IntroductionButtonGroup = ({
         )}
         onClick={() => onRedirectGithub()}
       >
-        <a className={styles.link} href="https://github.com/jurekledzinski">
+        <a
+          className={styles.link}
+          href="https://github.com/jurekledzinski"
+          target="_blank"
+        >
           <Icon icon={faSquareGithub} />
         </a>
       </Button>
@@ -48,7 +52,12 @@ export const IntroductionButtonGroup = ({
         )}
         onClick={() => onRedirectLinkedin()}
       >
-        <a className={styles.link} href="#">
+        <a
+          className={styles.link}
+          href="https://www.linkedin.com/in/j
+urek-ledzinski"
+          target="_blank"
+        >
           <Icon icon={faLinkedin} />
         </a>
       </Button>
