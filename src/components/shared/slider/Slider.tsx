@@ -36,7 +36,7 @@ export const Slider = ({ options }: SliderProps) => {
           <Button
             className={classNames(
               stylesButton.buttonConfirm,
-              stylesButton.redirectButton
+              styles.redirectButton
             )}
           >
             <a
@@ -49,7 +49,7 @@ export const Slider = ({ options }: SliderProps) => {
           <Button
             className={classNames(
               stylesButton.buttonConfirm,
-              stylesButton.redirectButton
+              styles.redirectButton
             )}
           >
             <a
