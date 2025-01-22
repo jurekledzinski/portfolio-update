@@ -24,6 +24,10 @@
   --color-bg-header: #373636;
   --color-input-placeholder: #a1a1a1;
   --color-disabled: #dddddd;
+  --color-bg-button-orange: #ff851b;
+  --color-bg-button-orange-hover: #e57718;
+  --color-bg-button-light-dark: #757575;
+  --color-bg-button-light-dark-hover: #696969;
 
   /* Background colors */
   --color-bg-white: white;
