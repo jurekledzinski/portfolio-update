@@ -14,7 +14,7 @@ export const IntroductionButtonGroup = ({
     <div className={classNames(stylesButton.buttonGroup, styles.buttonGroup)}>
       <Button
         className={classNames(
-          stylesButton.buttonConfirm,
+          stylesButton.buttonDownload,
           styles.buttonIntroduction
         )}
         onClick={() => {
@@ -32,7 +32,7 @@ export const IntroductionButtonGroup = ({
       </Button>
       <Button
         className={classNames(
-          stylesButton.buttonConfirm,
+          stylesButton.buttonRedirect,
           styles.buttonIntroduction
         )}
         onClick={() => onRedirectGithub()}
@@ -47,7 +47,7 @@ export const IntroductionButtonGroup = ({
       </Button>
       <Button
         className={classNames(
-          stylesButton.buttonConfirm,
+          stylesButton.buttonRedirect,
           styles.buttonIntroduction
         )}
         onClick={() => onRedirectLinkedin()}
