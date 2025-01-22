@@ -37,6 +37,24 @@ button.button:disabled {
   background-color: var(--color-secondary-hover);
 }
 
+.buttonDownload {
+  background-color: var(--color-bg-button-orange);
+  color: var(--color-text-white);
+}
+
+.buttonDownload:hover {
+  background-color: var(--color-bg-button-orange-hover);
+}
+
+.buttonRedirect {
+  background-color: var(--color-bg-button-light-dark);
+  color: var(--color-text-white);
+}
+
+.buttonRedirect:hover {
+  background-color: var(--color-bg-button-light-dark-hover);
+}
+
 .buttonModalClose {
   padding: 2px 5px 0px;
   margin: 0;
