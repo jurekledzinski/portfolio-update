@@ -37,14 +37,8 @@ img {
 
 .buttonGroup {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
-
-/* @media (min-width: 35.938rem) {
-  .embla {
-    max-width: 500px;
-  }
-} */
