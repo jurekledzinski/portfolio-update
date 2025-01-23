@@ -11,10 +11,9 @@ export const IntroductionHeader = () => {
         <h1 className={styles.title}>Frontend developer</h1>
       </header>
       <p className={styles.text}>
-        With two years of experience in frontend development, I specialize in
-        building dynamic, user-focused web applications using React.js,
-        TypeScript, and SCSS, while actively expanding my skills in Next.js and
-        backend technologies like Node.js and MongoDB.
+        With 2 years of experience in React.js, Javascript, TypeScript, CSS and
+        SCSS, focused on creating user-friendly interfaces and exploring
+        Next.js, Node.js, and MongoDB.
       </p>
     </div>
   );
