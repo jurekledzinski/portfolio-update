@@ -6,7 +6,6 @@ import path from 'path';
 import { ContactEmailSchema } from '../../src/actions';
 import { tryCatch } from '../../netlify-helpers/tryCatch';
 import type { Handler, HandlerEvent } from '@netlify/functions';
-// import contactEmailTemplate from '../../src/templates/contactEmail.hbs';
 
 const contactEmailTemplate = fs.readFileSync(
   path.join(__dirname, '../../src/templates/contactEmail.hbs'),
@@ -17,8 +16,6 @@ const compiledTemplate = handlebars.compile(contactEmailTemplate);
 export const handler: Handler = tryCatch(async (event: HandlerEvent) => {
   const body = JSON.parse(event.body!);
   const parsedData = ContactEmailSchema.parse(body);
-
-  console.log('body contact', body);
 
   const currentYear = new Date().getFullYear();
   const date = new Date().toLocaleString();
