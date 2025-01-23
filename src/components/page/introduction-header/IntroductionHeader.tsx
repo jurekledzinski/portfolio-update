@@ -11,9 +11,10 @@ export const IntroductionHeader = () => {
         <h1 className={styles.title}>Frontend developer</h1>
       </header>
       <p className={styles.text}>
-        As a resultant implication, the understanding of the great significance
-        of the entity integrity is regularly debated in the light of The Control
-        of Adaptive Framework
+        With two years of experience in frontend development, I specialize in
+        building dynamic, user-focused web applications using React.js,
+        TypeScript, and SCSS, while actively expanding my skills in Next.js and
+        backend technologies like Node.js and MongoDB.
       </p>
     </div>
   );
