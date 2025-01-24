@@ -1,6 +1,6 @@
 import styles from './IntroductionButtonGroup.module.css';
 import { Button, Icon, stylesButton } from '@/components/shared';
-import { classNames, showSuccessToast } from '@/helpers';
+import { classNames } from '@/helpers';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { IntroductionButtonGroupProps } from './types';
@@ -19,7 +19,6 @@ export const IntroductionButtonGroup = ({
         )}
         onClick={() => {
           onDownload();
-          showSuccessToast('Cv downloaded successfully');
         }}
       >
         <a
