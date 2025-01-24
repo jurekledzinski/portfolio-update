@@ -4,6 +4,34 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300;
+  src: url('assets/fonts/roboto-300.woff2') format('woff2'),
+    url('assets/fonts/roboto-300.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: url('assets/fonts/roboto-regular.woff2') format('woff2'),
+    url('assets/fonts/roboto-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-weight: 400;
+  src: url('assets/fonts/oswald-regular.woff2') format('woff2'),
+    url('assets/fonts/oswald-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-weight: 700;
+  src: url('assets/fonts/oswald-700.woff2') format('woff2'),
+    url('assets/fonts/oswald-700.woff') format('woff');
+}
+
 :root {
   /* Colors */
   --color-primary: #1976d2;
@@ -39,8 +67,8 @@
   --color-info: #17a2b8;
 
   /* Fonts */
-  --font-roboto: 'Roboto', serif;
-  --font-oswald: 'Oswald', serif;
+  --font-roboto: 'Roboto';
+  --font-oswald: 'Oswald';
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -148,6 +176,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-oswald);
+  font-weight: 700;
 }
 
 p {
