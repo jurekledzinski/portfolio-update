@@ -1,10 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import { handlebarsPlugin } from './plugins/vite-plugin-handlebars';
 
 export default defineConfig({
-  plugins: [react(), handlebarsPlugin()],
+  plugins: [react()],
   server: {
     open: true,
     port: 3000,
