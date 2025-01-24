@@ -21,18 +21,11 @@ const App = () => {
         <div className={styles.box}>
           <IntroductionHeader />
           <IntroductionButtonGroup
-            onDownload={() => {
-              console.log('Click download cv');
-              mutation.mutate({ eventType: 'cv' });
-            }}
-            onRedirectGithub={() => {
-              console.log('Click redirect github');
-              mutation.mutate({ eventType: 'github' });
-            }}
-            onRedirectLinkedin={() => {
-              console.log('Click redirect linkedin');
-              mutation.mutate({ eventType: 'linkedin' });
-            }}
+            onDownload={() => mutation.mutate({ eventType: 'cv' })}
+            onRedirectGithub={() => mutation.mutate({ eventType: 'github' })}
+            onRedirectLinkedin={() =>
+              mutation.mutate({ eventType: 'linkedin' })
+            }
           />
         </div>
         <div className={styles.box}>
