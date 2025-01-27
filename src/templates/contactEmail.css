@@ -52,12 +52,18 @@ body {
 
 .main-table__body-title-1 {
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #555555;
 }
 
 .main-table__body-title-2 {
   margin: 0.5rem 0;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #555555;
 }
 
 .main-table__body-text {
