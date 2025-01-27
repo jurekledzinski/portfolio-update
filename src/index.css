@@ -67,8 +67,8 @@
   --color-info: #17a2b8;
 
   /* Fonts */
-  --font-roboto: 'Roboto';
-  --font-oswald: 'Oswald';
+  --font-roboto: 'Roboto', sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
