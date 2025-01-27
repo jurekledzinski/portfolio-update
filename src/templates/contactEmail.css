@@ -21,13 +21,15 @@ body {
 }
 
 .main-table__header {
-  border: 1px solid #dddddd;
-  padding: 0.5rem 1rem 0.4rem;
   width: 100%;
+  padding: 0.5rem 1rem 0.4rem;
+  background-color: #373636;
+  border: 1px solid #373636;
+  color: white;
 }
 
 .main-table__title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -68,7 +70,7 @@ body {
 }
 
 .main-table__footer {
-  background-color: #0074d9;
+  background-color: #373636;
   padding: 1rem 1rem 0.9rem;
   width: 100%;
 }
