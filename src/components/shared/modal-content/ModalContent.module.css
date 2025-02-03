@@ -28,3 +28,11 @@ h5.title {
   padding: 0.75rem;
   background-color: var(--color-bg-white);
 }
+
+button.buttonIcon {
+  padding: 2px 5px;
+}
+
+.icon {
+  font-size: initial;
+}

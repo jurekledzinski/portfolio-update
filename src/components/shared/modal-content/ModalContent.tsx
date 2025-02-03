@@ -22,8 +22,14 @@ export const ModalContent = ({
     <>
       <header className={styles.header}>
         <h5 className={styles.title}>{title}</h5>
-        <button className={stylesButton.buttonModalClose} onClick={onClose}>
-          <Icon icon={faXmark} />
+        <button
+          className={classNames(
+            stylesButton.buttonModalClose,
+            styles.buttonIcon
+          )}
+          onClick={onClose}
+        >
+          <Icon className={styles.icon} icon={faXmark} />
         </button>
       </header>
       <div className={styles.body}>{children}</div>
