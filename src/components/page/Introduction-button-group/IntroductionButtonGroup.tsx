@@ -3,13 +3,8 @@ import { Button, Icon, stylesButton } from '@/components/shared';
 import { classNames } from '@/helpers';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
-import { IntroductionButtonGroupProps } from './types';
 
-export const IntroductionButtonGroup = ({
-  onDownload,
-  onRedirectGithub,
-  onRedirectLinkedin,
-}: IntroductionButtonGroupProps) => {
+export const IntroductionButtonGroup = () => {
   return (
     <div className={classNames(stylesButton.buttonGroup, styles.buttonGroup)}>
       <Button
@@ -17,9 +12,6 @@ export const IntroductionButtonGroup = ({
           stylesButton.buttonDownload,
           styles.buttonIntroduction
         )}
-        onClick={() => {
-          onDownload();
-        }}
       >
         <a
           className={styles.link}
@@ -34,7 +26,6 @@ export const IntroductionButtonGroup = ({
           stylesButton.buttonRedirect,
           styles.buttonIntroduction
         )}
-        onClick={() => onRedirectGithub()}
       >
         <a
           className={styles.link}
@@ -49,7 +40,6 @@ export const IntroductionButtonGroup = ({
           stylesButton.buttonRedirect,
           styles.buttonIntroduction
         )}
-        onClick={() => onRedirectLinkedin()}
       >
         <a
           className={styles.link}
