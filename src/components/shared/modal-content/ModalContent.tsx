@@ -1,11 +1,9 @@
-import styles from './ModalContent.module.css';
 import { Button } from '../button';
-import { classNames } from '@/helpers';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { getClassNamesModalContent } from './utils';
+import { Icon } from '../icon';
 import { Loader } from '../loader';
 import { ModalContentProps } from './types';
-import { stylesButton } from '../button';
-import { Icon } from '../icon';
 
 export const ModalContent = ({
   cancelText,
@@ -18,33 +16,22 @@ export const ModalContent = ({
   onClose,
   onConfirm,
 }: ModalContentProps) => {
+  const classes = getClassNamesModalContent();
   return (
     <>
-      <header className={styles.header}>
-        <h5 className={styles.title}>{title}</h5>
-        <button
-          className={classNames(
-            stylesButton.buttonModalClose,
-            styles.buttonIcon
-          )}
-          onClick={onClose}
-        >
-          <Icon className={styles.icon} icon={faXmark} />
+      <header className={classes.header}>
+        <h5 className={classes.title}>{title}</h5>
+        <button className={classes.buttonModalClose} onClick={onClose}>
+          <Icon className={classes.icon} icon={faXmark} />
         </button>
       </header>
-      <div className={styles.body}>{children}</div>
-      <footer className={styles.footer}>
-        <button
-          className={classNames(stylesButton.button, stylesButton.buttonCancel)}
-          onClick={onCancel}
-        >
+      <div className={classes.body}>{children}</div>
+      <footer className={classes.footer}>
+        <button className={classes.buttonCancel} onClick={onCancel}>
           {cancelText}
         </button>
         <Button
-          className={classNames(
-            stylesButton.button,
-            stylesButton.buttonConfirm
-          )}
+          className={classes.buttonConfirm}
           disabled={isPending}
           form={form}
           onClick={onConfirm}
