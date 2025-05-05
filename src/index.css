@@ -37,20 +37,17 @@
 }
 
 :root {
-  /* Colors */
   --color-primary: #1976d2;
   --color-primary-hover: #1469bd;
 
   --color-secondary: #555555;
   --color-secondary-hover: #eeeeee;
 
-  /* Text Colors */
   --color-text-primary: #555555;
   --color-text-secondary: #757575;
   --color-text-white: white;
   --color-text-orange: #ff851b;
 
-  /* Elements colors */
   --color-border-input: #757575;
   --color-border-loader: #dddddd;
   --color-bg-header: #373636;
@@ -61,16 +58,13 @@
   --color-bg-button-light-dark: #757575;
   --color-bg-button-light-dark-hover: #696969;
 
-  /* Background colors */
   --color-bg-white: white;
 
-  /* Feedback Colors */
   --color-success: #28a745;
   --color-negative: #dc3545;
   --color-warning: #ffc107;
   --color-info: #17a2b8;
 
-  /* Fonts */
   --font-roboto: 'Roboto', sans-serif;
   --font-oswald: 'Oswald', sans-serif;
 
