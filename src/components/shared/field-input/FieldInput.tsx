@@ -1,10 +1,9 @@
-import styles from './FieldInput.module.css';
-import { classNames } from '@/helpers';
 import { FieldInputProps } from './types';
 import { Fieldset } from '../fieldset';
+import { forwardRef, Ref } from 'react';
+import { getClassNamesFieldInput } from './utils';
 import { Input } from '../input';
 import { Label } from '../label';
-import { forwardRef, Ref } from 'react';
 
 export const FieldInput = forwardRef<HTMLInputElement, FieldInputProps>(
   (
@@ -21,10 +20,16 @@ export const FieldInput = forwardRef<HTMLInputElement, FieldInputProps>(
     },
     ref: Ref<HTMLInputElement>
   ) => {
+    const classes = getClassNamesFieldInput(
+      classNameField,
+      classNameLabel,
+      classNameInput
+    );
+
     return (
-      <Fieldset className={classNames(styles.fieldset, classNameField!)}>
+      <Fieldset className={classes.fieldset}>
         {label && (
-          <Label className={classNames(classNameLabel!)} htmlFor={name}>
+          <Label className={classes.label} htmlFor={name}>
             {label}
           </Label>
         )}
@@ -32,7 +37,7 @@ export const FieldInput = forwardRef<HTMLInputElement, FieldInputProps>(
           <Input
             {...rest}
             ref={ref}
-            className={classNames(classNameInput!, styles.input)}
+            className={classes.input}
             name={name}
             placeholder={placeholder}
             type={type}
