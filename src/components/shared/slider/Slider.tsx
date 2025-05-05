@@ -4,7 +4,8 @@ import { Button, stylesButton } from '@/components/shared';
 import { classNames } from '@/helpers';
 import { faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 import { Icon } from '../icon';
-import { sliderData } from '@/data';
+import { projectsDescription, sliderData } from '@/data';
+import { SlideDescription } from './components';
 import { SliderProps } from './types';
 import { stylesLink } from '@/components/page';
 import { useControlSlider } from '@/hooks';
@@ -18,15 +19,24 @@ export const Slider = ({ options }: SliderProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const currentIndex = (emblaApi && emblaApi.selectedScrollSnap()) ?? 0;
 
-  const { disabledNext, disabledPrev, onNextButtonClick, onPrevButtonClick } =
-    useControlSlider({ emblaApi });
+  const {
+    disabledNext,
+    disabledPrev,
+    onNextButtonClick,
+    onPrevButtonClick,
+    selectedIndex,
+  } = useControlSlider({ emblaApi });
 
   return (
     <div className={styles.embla}>
       <div className={styles.emblaViewport} ref={emblaRef}>
         <div className={styles.emblaContainer}>
-          {sliderData.map((slide) => (
+          {sliderData.map((slide, index) => (
             <div className={styles.emblaSlide} key={slide.id}>
+              <SlideDescription
+                data={projectsDescription[currentIndex]}
+                isActive={index === selectedIndex}
+              />
               <img src={slide.src} alt="Project image" />
             </div>
           ))}
