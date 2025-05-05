@@ -21,10 +21,7 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(
           nodeRef={localRef}
           timeout={300}
           classNames={{
-            enter: styles.modalEnter,
-            enterActive: styles.modalEnterActive,
-            exit: styles.modalExit,
-            exitActive: styles.modalExitActive,
+            ...styles,
           }}
           unmountOnExit
           onEnter={onEnter}
