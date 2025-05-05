@@ -14,12 +14,10 @@ export const Backdrop = ({ onClick, show }: BackdropProps) => {
         in={show}
         timeout={300}
         classNames={{
-          enter: styles.backdropEnter,
-          enterActive: styles.backdropEnterActive,
-          exit: styles.backdropExit,
-          exitActive: styles.backdropExitActive,
+          ...styles,
         }}
         unmountOnExit
+        appear
       >
         <div
           ref={nodeRef}

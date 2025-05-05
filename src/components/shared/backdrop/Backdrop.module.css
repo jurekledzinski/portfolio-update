@@ -6,26 +6,25 @@
   bottom: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
-  transition: 0.3s linear;
 }
 
-.backdropEnter {
+.enter {
   opacity: 0;
   background-color: rgba(0, 0, 0, 0);
 }
 
-.backdropEnterActive {
+.enterActive {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.5);
   transition: 0.3s linear;
 }
 
-.backdropExit {
+.exit {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.backdropExitActive {
+.exitActive {
   opacity: 0;
   background-color: rgba(0, 0, 0, 0);
   transition: 0.3s linear;
