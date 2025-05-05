@@ -1,10 +1,9 @@
-import styles from './FieldTextarea.module.css';
-import { classNames } from '@/helpers';
 import { Fieldset } from '../fieldset';
 import { FieldTextareaProps } from './types';
+import { forwardRef, Ref } from 'react';
+import { getClassNamesFieldTextarea } from './utils';
 import { Label } from '../label';
 import { Textarea } from '../textarea';
-import { forwardRef, Ref } from 'react';
 
 export const FieldTextarea = forwardRef<
   HTMLTextAreaElement,
@@ -23,17 +22,23 @@ export const FieldTextarea = forwardRef<
     },
     ref: Ref<HTMLTextAreaElement>
   ) => {
+    const classes = getClassNamesFieldTextarea(
+      classNameField,
+      classNameLabel,
+      classNameTextarea
+    );
+
     return (
-      <Fieldset className={classNames(styles.fieldset, classNameField!)}>
+      <Fieldset className={classes.fieldset}>
         {label && (
-          <Label className={classNames(classNameLabel!)} htmlFor={name}>
+          <Label className={classes.label} htmlFor={name}>
             {label}
           </Label>
         )}
         {children ?? (
           <Textarea
             {...rest}
-            className={classNames(styles.input, classNameTextarea!)}
+            className={classes.textarea}
             name={name}
             placeholder={placeholder}
             ref={ref}
