@@ -24,7 +24,7 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 35.938rem) {
+@media (min-width: 62.5rem) {
   .main {
     flex-direction: row;
   }
