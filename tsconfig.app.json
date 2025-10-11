@@ -24,7 +24,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"]
     }
   },
@@ -32,6 +31,7 @@
     "src/**/*",
     "vite-env.d.ts",
     "src/types/**/*",
+    "src/types-dts/**/*",
     "netlify/functions/**/*"
   ],
   "exclude": ["node_modules"]
