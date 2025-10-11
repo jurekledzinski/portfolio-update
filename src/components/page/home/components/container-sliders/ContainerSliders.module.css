@@ -34,13 +34,15 @@ div.emblaSlide {
   justify-content: center;
   align-items: flex-start;
   transform: translate3d(0, 0, 0);
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 16 / 9;
   width: 100%;
   min-width: 0;
   height: 100%;
   max-height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  min-height: 250px;
+  height: 250px;
 }
 
 .emblaSlideInner {
@@ -50,16 +52,40 @@ div.emblaSlide {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  min-height: inherit;
 }
 
 div.wrapper {
   height: auto;
+  min-height: inherit;
+  background-color: #121212;
 }
 
 img.image {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 575px) {
+  div.emblaSlide {
+    aspect-ratio: 16 / 7;
+    min-height: initial;
+    height: 100%;
+  }
+
+  .emblaSlideInner {
+    min-height: initial;
+  }
+
+  div.wrapper {
+    min-height: initial;
+  }
+
+  img.image {
+    object-fit: initial;
+  }
 }
 
 @media (max-width: 750px) {
