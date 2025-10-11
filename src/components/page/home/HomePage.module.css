@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+  margin: 3rem auto 0;
+}
+
+.box {
+  width: 100%;
+}
+
+.box:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 0.5rem;
+}
+
+.subTitle {
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+@media (min-width: 35.938rem) {
+  .main {
+    flex-direction: row;
+  }
+
+  .box {
+    width: 50%;
+  }
+}
