@@ -7,6 +7,7 @@ export * from './container';
 export * from './fieldset';
 export * from './icon-button';
 export * from './icon';
+export * from './image';
 export * from './input';
 export * from './label';
 export * from './loader';
