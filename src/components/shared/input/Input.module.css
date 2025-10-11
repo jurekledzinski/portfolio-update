@@ -1,9 +1,10 @@
-.input {
+.input,
+.textarea {
   display: block;
-  border: 1px solid var(--color-border-input);
-  border-radius: 2px;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem;
   width: 100%;
+}
+
+.textarea {
   resize: none;
-  font-weight: 300;
 }
