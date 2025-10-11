@@ -1,4 +1,4 @@
-import { ContactFormInputs } from '@/components/shared';
+import { ContactFormInputs } from '@/components';
 
 export const sendContactMessage = async (body: ContactFormInputs) => {
   const response = await fetch('/.netlify/functions/contact', {

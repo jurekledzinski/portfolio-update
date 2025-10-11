@@ -1,4 +1,4 @@
-import { ContactFormInputs } from '@/components/shared';
+import { ContactFormInputs } from '@/components';
 import { useForm } from 'react-hook-form';
 import { useResetForm } from './useResetForm';
 
