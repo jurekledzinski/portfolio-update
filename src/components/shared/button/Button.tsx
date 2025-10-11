@@ -1,24 +1,49 @@
-import styles from './Button.module.css';
-import { classNames } from '@/helpers';
-import { ButtonProps } from './types';
+import { ButtonContent, formatProps, getClassButton } from '@/components';
+import { ButtonProps, LinkButtonProps } from './types';
 
 export const Button = ({
-  children,
-  className,
-  disabled,
-  form,
-  onClick,
+  iconStart,
+  iconEnd,
+  label,
   ...props
-}: ButtonProps) => {
+}: ButtonProps | LinkButtonProps) => {
+  const { button, rest } = formatProps(props);
+  const classElement = getClassButton(button);
+
+  if ('href' in rest) {
+    return (
+      <a
+        aria-label="Link button"
+        role="link"
+        className={classElement}
+        {...(button.disabled || button.isLoading ? {} : { href: rest.href })}
+        {...rest}
+      >
+        <ButtonContent
+          label={label}
+          iconEnd={iconEnd}
+          iconStart={iconStart}
+          isLoading={button.isLoading}
+          size={button.size}
+        />
+      </a>
+    );
+  }
+
   return (
     <button
-      {...props}
-      className={classNames(styles.button, className!)}
-      disabled={disabled}
-      {...(form && { form })}
-      onClick={onClick}
+      aria-label="Button"
+      className={classElement}
+      disabled={button.disabled || button.isLoading}
+      {...rest}
     >
-      {children}
+      <ButtonContent
+        label={label}
+        iconEnd={iconEnd}
+        iconStart={iconStart}
+        isLoading={button.isLoading}
+        size={button.size}
+      />
     </button>
   );
 };
