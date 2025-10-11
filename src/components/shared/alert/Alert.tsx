@@ -1,20 +1,37 @@
-import styles from './Alert.module.css';
 import { AlertProps } from './types';
-import { classNames } from '@/helpers';
-import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { getClassNamesAlert } from './utils';
+import { Icon, IconButton } from '@/components';
+import { useState } from 'react';
 
-export const Alert = ({
-  className,
-  children,
-  icon = faExclamationCircle,
-}: AlertProps) => {
+export const Alert = ({ icon, isClosable, message, ...props }: AlertProps) => {
+  const [isVisible, setIsVisible] = useState(true);
+  const classes = getClassNamesAlert(props);
+
   return (
-    <div className={classNames(styles.alert, className!)}>
-      <span className={styles.icon}>
-        <FontAwesomeIcon icon={icon} />
-      </span>
-      <p className={styles.text}>{children}</p>
-    </div>
+    <>
+      {isVisible ? (
+        <div className={classes.alert}>
+          <span className={classes.icon}>
+            <Icon icon={icon} />
+          </span>
+
+          <p className={classes.message}>{message}</p>
+
+          {isClosable ? (
+            <span className={classes.iconClose}>
+              <IconButton
+                icon={[faXmark]}
+                onClick={() => setIsVisible(false)}
+                size="size-xxs"
+                variant="contained"
+                color={props.color}
+                contrast
+              />
+            </span>
+          ) : null}
+        </div>
+      ) : null}
+    </>
   );
 };

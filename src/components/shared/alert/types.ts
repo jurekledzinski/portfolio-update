@@ -1,7 +1,12 @@
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { Color, Icon, Radius, Size, SpacingToken } from '@/types';
 
-export type AlertProps = {
-  children?: React.ReactNode;
-  className?: string;
-  icon?: IconDefinition;
-};
+export interface AlertProps extends SpacingToken {
+  color: Exclude<Color, 'primary'> | 'info';
+  icon: Icon;
+  message: string;
+  isClosable?: boolean;
+  fullWidth?: boolean;
+  radius?: Radius;
+  size?: Omit<Size, 'size-md' | 'size-lg'>;
+  variant?: 'contained' | 'filled' | 'light' | 'outlined';
+}
