@@ -52,8 +52,6 @@ export const Slider = forwardRef<HTMLDivElement, SliderProps<SliderData>>(
                       onLoad={onLoad}
                       onError={onError}
                       alt="Project image"
-                      width={600}
-                      height={597}
                     />
                   )}
                 </>
