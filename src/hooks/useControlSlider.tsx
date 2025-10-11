@@ -10,12 +10,12 @@ export const useControlSlider = ({ emblaApi }: UseControlSlider) => {
   const [disabledNext, setDisabledNext] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
-  const onPrevButtonClick = useCallback(() => {
+  const onClickPrev = useCallback(() => {
     if (!emblaApi) return;
     emblaApi.scrollPrev();
   }, [emblaApi]);
 
-  const onNextButtonClick = useCallback(() => {
+  const onClickNext = useCallback(() => {
     if (!emblaApi) return;
     emblaApi.scrollNext();
   }, [emblaApi]);
@@ -46,8 +46,8 @@ export const useControlSlider = ({ emblaApi }: UseControlSlider) => {
   return {
     disabledPrev,
     disabledNext,
-    onPrevButtonClick,
-    onNextButtonClick,
+    onClickPrev,
+    onClickNext,
     selectedIndex,
   };
 };
