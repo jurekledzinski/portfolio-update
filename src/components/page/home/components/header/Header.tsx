@@ -4,12 +4,16 @@ import { showErrorToast, showSuccessToast } from '@/helpers';
 import { useContactForm } from '@/hooks';
 import { useMutation } from '@tanstack/react-query';
 import {
+  Button,
   ContactForm,
   ContactFormInputs,
-  ModalContact,
-} from '@/components/shared';
+  Modal,
+  useControlModal,
+} from '@/components';
 
 export const Header = () => {
+  const { onClose, onOpen, isOpen } = useControlModal();
+
   const mutation = useMutation<ResponseSuccess, Error, ContactFormInputs>({
     mutationFn: async (body) => await sendContactMessage(body),
     onSuccess: () => showSuccessToast('Message sent successfully'),
@@ -29,21 +33,36 @@ export const Header = () => {
           <span>Port</span>
           <span>folio</span>
         </h3>
-        <ModalContact
+        <Button
+          color="primary"
+          label="Contact"
+          onClick={onOpen}
+          radius="radius-xs"
+          variant="contained"
+        />
+        <Modal
+          color="primary"
+          confirmText="Send"
+          confirmType="submit"
           form="contact"
-          triggerButton="Contact"
-          title="Contact"
           isPending={mutation.isPending}
           isSuccess={mutation.isSuccess}
-          onCancel={() => methodsContact.reset()}
+          onCancel={() => {
+            onClose();
+            methodsContact.reset();
+          }}
           onSuccess={() => mutation.reset()}
+          onClose={onClose}
+          open={isOpen}
+          portal={true}
+          title="Contact"
         >
           <ContactForm
             isError={false}
             methods={methodsContact}
             onSubmit={onSubmitContact}
           />
-        </ModalContact>
+        </Modal>
       </nav>
     </header>
   );
