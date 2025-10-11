@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { StrictMode } from 'react';
 import { Toaster } from 'react-hot-toast';
-import './index.css';
+import './styles/main.css';
 
 const queryClient = new QueryClient();
 
