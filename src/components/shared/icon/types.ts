@@ -1,3 +1,7 @@
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { Color } from '@/types';
+import { FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 
-export type IconProps = { className?: string; icon: IconDefinition };
+export interface IconProps extends FontAwesomeIconProps {
+  className?: string;
+  color?: Color | 'info';
+}
