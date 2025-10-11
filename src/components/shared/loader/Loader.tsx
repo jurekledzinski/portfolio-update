@@ -1,12 +1,29 @@
-import styles from './Loader.module.css';
-import { classNames } from '@/helpers';
 import { LoaderProps } from './types';
+import { loaderClassNames } from './utils';
 
-export const Loader = ({ ...props }: LoaderProps) => {
+export const Loader = ({
+  border,
+  className,
+  colorSpin,
+  colorTrack,
+  position,
+  size,
+  style,
+}: LoaderProps) => {
+  const classes = loaderClassNames({ border, className, position, size });
+
   return (
     <span
-      {...props}
-      className={classNames(styles.loader, props.className!)}
+      className={classes}
+      style={
+        {
+          ...style,
+          ...(typeof size === 'number' ? { width: size, height: size } : {}),
+          ...(colorTrack ? { borderColor: colorTrack } : {}),
+          ...(colorSpin ? { borderTopColor: colorSpin } : {}),
+          ...(size ? { '--size': `${size}px` } : {}),
+        } as React.CSSProperties
+      }
     ></span>
   );
 };
