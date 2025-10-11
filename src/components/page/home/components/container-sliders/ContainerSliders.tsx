@@ -2,14 +2,20 @@ import stylesContainer from './ContainerSliders.module.css';
 import useEmblaCarousel from 'embla-carousel-react';
 import { sliderProjectsData, sliderScreenShotsData } from '@/data';
 import { useControlSlider } from '@/hooks';
+
 import {
   faChevronLeft,
   faChevronRight,
+  faTriangleExclamation,
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
+
 import {
+  Alert,
   BaseSlider,
   IconButton,
+  Image,
+  ImageContainer,
   Modal,
   Slider,
   useControlModal,
@@ -74,11 +80,36 @@ export const ContainerSliders = () => {
           onRenderSlide={(slide) => (
             <div className={stylesContainer.emblaSlide} key={slide.id}>
               <div className={stylesContainer.emblaSlideInner}>
-                <img
-                  className={stylesContainer.image}
-                  src={slide.src}
-                  alt="Screenshot image"
-                />
+                <ImageContainer
+                  className={stylesContainer.wrapper}
+                  key={slide.src}
+                  loader="skeleton"
+                >
+                  {({ onLoad, onError, isError, isLoading }) => (
+                    <>
+                      {isError && !isLoading ? (
+                        <Alert
+                          color="negative"
+                          icon={faTriangleExclamation}
+                          message="Failed to load image"
+                          fullWidth
+                          size="size-xs"
+                          variant="light"
+                        />
+                      ) : (
+                        <Image
+                          className={stylesContainer.image}
+                          src={slide.src}
+                          onLoad={onLoad}
+                          onError={onError}
+                          alt="Screenshot image"
+                          width={600}
+                          height={597}
+                        />
+                      )}
+                    </>
+                  )}
+                </ImageContainer>
               </div>
             </div>
           )}
