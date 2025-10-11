@@ -61,3 +61,27 @@ img.image {
   max-width: 100%;
   height: auto;
 }
+
+@media (max-width: 750px) {
+  button.close {
+    top: 0.5rem;
+    right: 0.5rem;
+    min-width: 0;
+    padding: 4px 6px;
+    font-size: 14px;
+  }
+
+  button.next {
+    min-width: 0;
+    padding: 4px 7px;
+    font-size: 14px;
+    transform: translate(-0.5rem, -50%);
+  }
+
+  button.prev {
+    min-width: 0;
+    padding: 4px 7px;
+    font-size: 14px;
+    transform: translate(0.5rem, -50%);
+  }
+}
