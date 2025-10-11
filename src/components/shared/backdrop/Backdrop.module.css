@@ -7,7 +7,7 @@
   z-index: var(--z-backdrop);
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .enter {
@@ -17,13 +17,13 @@
 
 .enterActive {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   transition: 0.3s linear;
 }
 
 .exit {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .exitActive {
