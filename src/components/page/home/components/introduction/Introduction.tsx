@@ -1,6 +1,6 @@
-import styles from './IntroductionHeader.module.css';
+import styles from './Introduction.module.css';
 
-export const IntroductionHeader = () => {
+export const Introduction = () => {
   return (
     <div className={styles.containerText}>
       <header>
