@@ -1,30 +1,19 @@
-'use client';
-import styles from './Backdrop.module.css';
+import { backdropCSSVariables } from './utils';
 import { BackdropProps } from './types';
-import { CSSTransition } from 'react-transition-group';
+import { BaseBackdrop } from './components';
+import { createPortal } from 'react-dom';
 import { useRef } from 'react';
 
-export const Backdrop = ({ onClick, show }: BackdropProps) => {
+export const Backdrop = ({ portal, zIndex, ...props }: BackdropProps) => {
   const nodeRef = useRef(null);
+  const inlineVariables = backdropCSSVariables({ zIndex });
 
-  return (
-    <>
-      <CSSTransition
-        nodeRef={nodeRef}
-        in={show}
-        timeout={300}
-        classNames={{
-          ...styles,
-        }}
-        unmountOnExit
-        appear
-      >
-        <div
-          ref={nodeRef}
-          className={styles.backdropElement}
-          onClick={onClick}
-        />
-      </CSSTransition>
-    </>
-  );
+  if (portal) {
+    return createPortal(
+      <BaseBackdrop ref={nodeRef} style={inlineVariables} {...props} />,
+      document.body
+    );
+  }
+
+  return <BaseBackdrop ref={nodeRef} style={inlineVariables} {...props} />;
 };
