@@ -1,32 +1,5 @@
-import { Slider } from './components/shared';
-import { styles } from '@/styles';
+import { HomePage } from '@/components';
 
-import {
-  Footer,
-  Header,
-  IntroductionButtonGroup,
-  IntroductionHeader,
-} from '@components/page';
-
-const App = () => {
-  return (
-    <>
-      <Header />
-      <main className={styles.main}>
-        <div className={styles.box}>
-          <IntroductionHeader />
-          <IntroductionButtonGroup />
-        </div>
-        <div className={styles.box}>
-          <header className={styles.header}>
-            <h3 className={styles.subTitle}>Projects</h3>
-          </header>
-          <Slider />
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
-};
+const App = () => <HomePage />;
 
 export default App;
