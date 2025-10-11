@@ -1,13 +1,25 @@
-.modalElement {
+.modalElement,
+.modalCleanElement {
   position: fixed;
-  width: min(calc(100% - 2rem), 400px);
-  background-color: var(--background-color);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transform-origin: center;
-  z-index: 2;
+  z-index: var(--z-modal);
   will-change: opacity, transform;
+}
+
+.modalElement {
+  width: min(calc(100% - 2rem), 500px);
+  background-color: var(--color-surface-elevated-2);
+  border-radius: 2px;
+}
+
+.modalCleanElement {
+  width: min(calc(100% - 2rem), 1300px);
+  max-height: calc(100% - 2rem);
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 .enter {
