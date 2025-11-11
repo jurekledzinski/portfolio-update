@@ -17,6 +17,12 @@ export const sliderProjectsData = [
     live: 'https://daily24news.netlify.app',
     repository: 'https://github.com/jurekledzinski/Daily-news',
   },
+  {
+    id: 4,
+    src: 'images/storybook-600.png',
+    live: 'https://storybook-eta-seven.vercel.app/?path=/docs/foundation-border--docs',
+    repository: 'https://github.com/jurekledzinski/Storybook',
+  },
 ];
 
 export const projectsDescription = [
@@ -90,8 +96,7 @@ export const projectsDescription = [
   },
   {
     title: 'Daily news',
-    description:
-      'A responsive MERN web app built with React and the the quardian free API.',
+    description: 'A responsive MERN web app built with React and the the quardian free API.',
     techStack: [
       'React',
       'React router',
@@ -108,6 +113,17 @@ export const projectsDescription = [
       'Comment on articles',
       'Authentication and secured user flows',
       'Update user profile and change password',
+    ],
+  },
+  {
+    title: 'Storybook components',
+    description: 'An interactive Storybook showcasing my reusable UI components',
+    techStack: ['Storybook'],
+    features: [
+      'Browse and preview components interactively',
+      'View props, states, and variations',
+      'Document design and usage examples',
+      'Built with [React] and Storybook',
     ],
   },
 ];
@@ -385,6 +401,24 @@ export const sliderScreenShotsData = [
     {
       id: 6,
       src: 'images/news/news_sign_up.png',
+    },
+  ],
+  [
+    {
+      id: 1,
+      src: 'images/storybook/colors_variables.png',
+    },
+    {
+      id: 2,
+      src: 'images/storybook/buttons_doc.png',
+    },
+    {
+      id: 3,
+      src: 'images/storybook/input.png',
+    },
+    {
+      id: 4,
+      src: 'images/storybook/colors_doc.png',
     },
   ],
 ];
