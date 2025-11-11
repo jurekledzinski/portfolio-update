@@ -123,7 +123,7 @@ export const projectsDescription = [
       'Browse and preview components interactively',
       'View props, states, and variations',
       'Document design and usage examples',
-      'Built with [React] and Storybook',
+      'Built with React, Typescript and Storybook',
     ],
   },
 ];
