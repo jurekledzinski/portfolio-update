@@ -96,7 +96,8 @@ export const projectsDescription = [
   },
   {
     title: 'Daily news',
-    description: 'A responsive MERN web app built with React and the the quardian free API.',
+    description:
+      'A responsive MERN web app built with React and the the quardian free API. Because of the free account limitations, the server may enter a sleep or idle state after a period of inactivity. The first one or two login or registration attempts may fail or time out.',
     techStack: [
       'React',
       'React router',
