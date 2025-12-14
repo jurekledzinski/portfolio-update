@@ -106,13 +106,14 @@ export const projectsDescription = [
       'Mongodb',
       'Express.js',
       'Passport.js',
+      'Zustand',
     ],
     features: [
       'Browse news by categories',
-      'Drag and drop dashboard',
+      'Drag and drop dashboard desktop and mobile',
       'Comment on articles',
       'Authentication and secured user flows',
-      'Update user profile and change password',
+      'Update user profile, change password and delete user account',
     ],
   },
   {
