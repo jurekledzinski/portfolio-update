@@ -380,27 +380,43 @@ export const sliderScreenShotsData = [
   [
     {
       id: 1,
-      src: 'images/news/news_empty.png',
+      src: 'images/news/news-dashboard-1.webp',
     },
     {
       id: 2,
-      src: 'images/news/news_home.png',
+      src: 'images/news/news-dashboard-2.webp',
     },
     {
       id: 3,
-      src: 'images/news/news_list.png',
+      src: 'images/news/news-login.webp',
     },
     {
       id: 4,
-      src: 'images/news/news_details.png',
+      src: 'images/news/news-register.webp',
     },
     {
       id: 5,
-      src: 'images/news/news_sign_in.png',
+      src: 'images/news/news-grid-articles.webp',
     },
     {
       id: 6,
-      src: 'images/news/news_sign_up.png',
+      src: 'images/news/news-details-1.webp',
+    },
+    {
+      id: 7,
+      src: 'images/news/news-details-2.webp',
+    },
+    {
+      id: 8,
+      src: 'images/news/news-profile-1.webp',
+    },
+    {
+      id: 9,
+      src: 'images/news/news-profile-2.webp',
+    },
+    {
+      id: 10,
+      src: 'images/news/news-profile-3.webp',
     },
   ],
   [
