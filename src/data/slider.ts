@@ -1,25 +1,25 @@
 export const sliderProjectsData = [
   {
     id: 1,
-    src: 'images/project-houses-600.png',
+    src: 'images/project-houses-600.webp',
     live: 'https://property-marketplace-olive.vercel.app',
     repository: 'https://github.com/jurekledzinski/property-marketplace',
   },
   {
     id: 2,
-    src: 'images/project-shoppy-600.png',
+    src: 'images/project-shoppy-600.webp',
     live: 'https://shoppy-woad-five.vercel.app',
     repository: 'https://github.com/jurekledzinski/shoppy',
   },
   {
     id: 3,
-    src: 'images/project-news-600.png',
+    src: 'images/project-news-600.webp',
     live: 'https://daily24news.netlify.app',
     repository: 'https://github.com/jurekledzinski/Daily-news',
   },
   {
     id: 4,
-    src: 'images/storybook-600.png',
+    src: 'images/storybook-600.webp',
     live: 'https://storybook-eta-seven.vercel.app/?path=/docs/foundation-border--docs',
     repository: 'https://github.com/jurekledzinski/Storybook',
   },
